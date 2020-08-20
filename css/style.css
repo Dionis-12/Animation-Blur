@@ -1,0 +1,45 @@
+
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	height: 100%;
+	width: 100%;
+}
+
+section .layer-2 {
+	background: url(../image/bg2.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	transition: 2s;
+	top: 0;
+	width: 100%;
+}
+
+
+section .layer-1 {
+	background: url(../image/bg2.jpg);
+	background-position: center;
+	height: 450px;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	transition: 2s;
+	top: 50%;
+	width: 600px;
+	z-index: 1;
+}
+
+.layer-1:hover {
+	box-shadow: 0 25px 60px rgba(0,0,0,.8);
+}
+
+.layer-1:hover ~ .layer-2 {
+	filter: blur(10px);
+}
